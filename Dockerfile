@@ -12,7 +12,7 @@ RUN         dpkg --add-architecture i386 \
             && apt-get update \
             && apt-get upgrade -y \
             && apt-get install netcat-traditional -y \
-            && apt-get install -y tar software-properties-common gnupg wget curl gcc g++ lib32gcc1 lib32tinfo5 lib32z1 lib32stdc++6 libtinfo5:i386 libncurses5:i386 libcurl3-gnutls:i386 iproute2 gdb libsdl1.2debian libfontconfig \
+            && apt-get install -y tar software-properties-common gnupg wget curl gcc g++ libpng12-0 lib32gcc1 lib32tinfo5 lib32z1 lib32stdc++6 libtinfo5:i386 libncurses5:i386 libcurl3-gnutls:i386 iproute2 gdb libsdl1.2debian libfontconfig \
             && wget -nc https://dl.winehq.org/wine-builds/Release.key \
             && apt-key add Release.key \
             && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' \
