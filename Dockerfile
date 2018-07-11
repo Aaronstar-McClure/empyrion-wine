@@ -19,6 +19,7 @@ RUN         dpkg --add-architecture i386 \
 #            && apt-get update \
 #            && apt-get install -y --install-recommends winehq-stable wine-mono \
             && apt-get install -y wine-stable \
+            && mkdir -p /usr/share/wine/mono \
             && cd /usr/share/wine/mono \
             && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
             && useradd -m -d /home/container container
