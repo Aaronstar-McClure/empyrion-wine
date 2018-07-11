@@ -17,7 +17,7 @@ RUN         dpkg --add-architecture i386 \
             && apt-key add Release.key \
             && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
             && apt-get update \
-            && apt-get install -y --install-recommends winehq-stable \
+            && apt-get install -y --install-recommends winehq-stable wine-mono \
             && useradd -m -d /home/container container
 
 USER        container
