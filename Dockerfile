@@ -3,7 +3,7 @@
 # Environment: Source Engine
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        ubuntu:18.04
+FROM        ubuntu:16.04
 
 MAINTAINER  Pterodactyl Software, <support@pterodactyl.io>
 ENV         DEBIAN_FRONTEND noninteractive
@@ -18,7 +18,7 @@ RUN         dpkg --add-architecture i386 \
 #            && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
 #            && apt-get update \
 #            && apt-get install -y --install-recommends winehq-stable wine-mono \
-            && apt-get install -y wine-stable mono-complete \
+            && apt-get install -y wine-stable wine-mono \
 #            && mkdir -p /usr/share/wine/mono \
 #            && cd /usr/share/wine/mono \
 #            && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
