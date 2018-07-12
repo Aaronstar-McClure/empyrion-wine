@@ -13,12 +13,12 @@ RUN         dpkg --add-architecture i386 \
             && apt-get upgrade -y \
             && apt-get install netcat-traditional -y \
             && apt-get install -y tar software-properties-common gnupg wget curl gcc g++ lib32gcc1 lib32tinfo5 lib32z1 lib32stdc++6 libtinfo5:i386 libncurses5:i386 libcurl3-gnutls:i386 iproute2 gdb libsdl1.2debian libfontconfig \
-#            && wget -nc https://dl.winehq.org/wine-builds/Release.key \
-#            && apt-key add Release.key \
-#            && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
-#            && apt-get update \
-#            && apt-get install -y --install-recommends winehq-stable wine-mono \
-            && apt-get install -y wine-stable wine-mono \
+            && wget -nc https://dl.winehq.org/wine-builds/Release.key \
+            && apt-key add Release.key \
+            && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main' \
+            && apt-get update \
+            && apt-get install -y --install-recommends winehq-stable \
+            && apt-get install -y wine-mono0.0.8 \
 #            && mkdir -p /usr/share/wine/mono \
 #            && cd /usr/share/wine/mono \
 #            && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
