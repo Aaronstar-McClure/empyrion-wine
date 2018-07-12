@@ -18,10 +18,10 @@ RUN         dpkg --add-architecture i386 \
 #            && add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' \
 #            && apt-get update \
 #            && apt-get install -y --install-recommends winehq-stable wine-mono \
-            && apt-get install -y wine-stable \
-            && mkdir -p /usr/share/wine/mono \
-            && cd /usr/share/wine/mono \
-            && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
+            && apt-get install -y wine-stable mono-complete \
+#            && mkdir -p /usr/share/wine/mono \
+#            && cd /usr/share/wine/mono \
+#            && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
             && useradd -m -d /home/container container
 
 USER        container
