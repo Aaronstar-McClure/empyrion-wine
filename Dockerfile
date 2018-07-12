@@ -22,11 +22,11 @@ RUN         dpkg --add-architecture i386 \
 #            && mkdir -p /usr/share/wine/mono \
 #            && cd /usr/share/wine/mono \
 #            && wget http://dl.winehq.org/wine/wine-mono/4.7.2/wine-mono-4.7.2.msi \
-            && useradd -m -d / container
+            && useradd -m -d /home/container container
 
 USER        container
-ENV         HOME /
-WORKDIR     /
+ENV         HOME /home/container
+WORKDIR     /home/container
 
 COPY        ./entrypoint.sh /entrypoint.sh
 CMD ["/bin/bash", "/entrypoint.sh"]
